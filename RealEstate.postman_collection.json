@@ -1,0 +1,52 @@
+{
+  "info": {
+    "name": "Real Estate API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health",
+      "request": { "method": "GET", "url": "http://localhost:3000/health" }
+    },
+    {
+      "name": "Listings - List",
+      "request": { "method": "GET", "url": "http://localhost:3000/listings" }
+    },
+    {
+      "name": "Listings - Get",
+      "request": { "method": "GET", "url": "http://localhost:3000/listings/1" }
+    },
+    {
+      "name": "Listings - Create",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"title\": \"Nice Home\",\n  \"city\": \"MIAMI\",\n  \"price\": 350000,\n  \"bedrooms\": 3,\n  \"agentId\": 1\n}" },
+        "url": "http://localhost:3000/listings"
+      }
+    },
+    {
+      "name": "Listings - Update",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": { "mode": "raw", "raw": "{\n  \"title\": \"Updated Home\",\n  \"city\": \"miami\",\n  \"price\": 355000,\n  \"bedrooms\": 4,\n  \"agentId\": 1\n}" },
+        "url": "http://localhost:3000/listings/1"
+      }
+    },
+    {
+      "name": "Listings - Delete",
+      "request": { "method": "DELETE", "url": "http://localhost:3000/listings/1" }
+    },
+    {
+      "name": "Stats - Active Agents",
+      "request": { "method": "GET", "url": "http://localhost:3000/stats/active-agents" }
+    },
+    {
+      "name": "Laravel - Listings",
+      "request": { "method": "GET", "url": "http://127.0.0.1:8000/laravel/listings" }
+    }
+  ]
+}
+
+
